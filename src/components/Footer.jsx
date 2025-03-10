@@ -11,14 +11,14 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-10 px-6">
-      <div className=" mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-3 gap-2">
         {/* Logo & About */}
         <div>
           <h2 className="text-2xl font-bold">
             Archana RamKishori Welfare Foundation!
           </h2>
           <p className="mt-2">
-            Section 8 License Number: 163714, NITI Aayog Number: UP/2025/05-5470
+            Section 8 License Number: 163714, <br /> NITI Aayog Number: UP/2025/05-5470
           </p>
           <p className="mt-2">
             {/* <FaMapMarkerAlt /> */}
@@ -47,15 +47,15 @@ const Footer = () => {
             </li>
             <li>
               <NavLink
-                to="/terms-conditions"
+                to="/terms-&-conditions"
                 className="hover:text-violet-400 transition"
               >
                 Terms & Conditions
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className="hover:text-violet-400 transition">
-                About
+              <NavLink to="/about-us" className="hover:text-violet-400 transition">
+                About Us
               </NavLink>
             </li>
             <li>

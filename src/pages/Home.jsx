@@ -5,9 +5,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 import About from "./About";
-import hero1 from "../assets/hero1.jpg";
-import hero2 from "../assets/hero2.jpg";
-import hero3 from "../assets/hero3.jpg";
+import hero1 from "../assets/NGO.jpg";
+import hero2 from "../assets/NGO1.jpg";
+import hero3 from "../assets/NGO2.jpg";
+import hero4 from "../assets/NGO4.jpg";
+import hero5 from "../assets/NGO5.jpg";
 
 const Home = () => {
   return (
@@ -19,7 +21,7 @@ const Home = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         loop={true}
-        className="h-[500px] md:h-[600px] w-full"
+        className="h-[500px] md:h-screen w-full"
       >
         <SwiperSlide>
           <img src={hero1} alt="" className="w-full h-full object-cover" />
@@ -27,8 +29,14 @@ const Home = () => {
         <SwiperSlide>
           <img src={hero2} alt="" className="w-full h-full object-cover" />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <img src={hero3} alt="" className="w-full h-full object-cover" />
+        </SwiperSlide> */}
+        <SwiperSlide>
+          <img src={hero4} alt="" className="w-full h-full object-cover" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={hero5} alt="" className="w-full h-full object-cover" />
         </SwiperSlide>
       </Swiper>
 

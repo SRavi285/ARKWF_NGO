@@ -30,8 +30,6 @@ const Header = () => {
           <ul className="hidden md:flex gap-6 text-lg font-medium">
             {[
               "Home",
-              "Privacy Policy",
-              "Terms & Conditions",
               "About Us",
               "Contact",
             ].map((item, index) => (
@@ -62,9 +60,8 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <ul
-        className={`${
-          menuOpen ? "flex flex-col gap-6  " : "hidden"
-        } md:hidden bg-white shadow-md text-lg font-medium transition-all duration-300`}
+        className={`${menuOpen ? "flex flex-col gap-6  " : "hidden"
+          } md:hidden bg-white shadow-md text-lg font-medium transition-all duration-300`}
       >
         {[
           "Home",

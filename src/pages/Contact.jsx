@@ -4,6 +4,7 @@ import { FaFacebookSquare, FaInstagramSquare, FaEnvelope, FaMapMarkerAlt, FaPhon
 import heroImage from "../assets/contact.jpg";
 import { FaLinkedin } from "react-icons/fa6";
 import { toast, ToastContainer } from "react-toastify";
+import GoogleMapComponent from "../components/GoogleMapComponent";
 
 const Contact = () => {
 
@@ -135,7 +136,9 @@ const Contact = () => {
             </button>
           </form>
         </div>
+
       </div>
+
     </div>
   );
 };
