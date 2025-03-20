@@ -7,13 +7,16 @@ import { Pagination, Autoplay } from "swiper/modules";
 import About from "./About";
 import hero1 from "../assets/NGO.jpg";
 import hero2 from "../assets/NGO1.jpg";
-import hero3 from "../assets/NGO2.jpg";
 import hero4 from "../assets/NGO4.jpg";
 import hero5 from "../assets/NGO5.jpg";
+import { useNavigate } from "react-router-dom";
+
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="w-full bg-gray-100">
+    <div className="w-full">
       {/* Hero Section */}
       <Swiper
         modules={[Pagination, Autoplay]}
@@ -41,7 +44,7 @@ const Home = () => {
       </Swiper>
 
       {/* Donate  Section */}
-      <div className="text-center py-10 bg-gray-900 text-white px-6">
+      <div className="text-center py-10 bg-gray-600 text-white px-6">
         <h2 className="text-3xl md:text-4xl font-bold">
           Make a Difference Today
         </h2>
@@ -49,9 +52,60 @@ const Home = () => {
           Join us in making the world a better place. Your small contribution
           can bring big change!
         </p>
-        <button className="mt-6 px-6 py-3 bg-white text-gray-900 font-bold rounded-lg hover:bg-gray-200 transition">
+        <button onClick={() => navigate('/donate')} className="bg-blue-600 text-white mt-6 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
           Donate Now
         </button>
+      </div>
+
+      {/* Who we are  */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center p-6 md:p-12">
+        {/* Image Section */}
+        <div className="flex justify-center">
+          <img
+            src={hero1}
+            alt="Who We Are"
+            className=" max-w-full rounded-lg shadow-lg"
+          />
+        </div>
+
+        {/* Text Content Section */}
+        <div className="shadow-lg px-8 py-2 rounded-lg">
+          <h3 className="text-xl md:text-2xl font-bold mt-3">
+            <span className="text-orange-500 text-3xl md:text-4xl">Who</span> WE
+            ARE
+          </h3>
+          <p className="text-gray-700 text-lg leading-relaxed mt-4">
+            The <strong>Archana RamKishori Welfare Foundation</strong> is a
+            pillar of support, dedicated to uplifting communities and fostering
+            meaningful change across India. As a nationally registered
+            non-profit organization, we focus on critical areas such as{" "}
+            <span className="font-semibold">
+              education, healthcare, livelihoods, and environmental conservation
+            </span>
+            , addressing pressing challenges with{" "}
+            <span className="font-semibold">
+              innovative, sustainable, and impact-driven solutions
+            </span>
+            .
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mt-4">
+            Guided by the core values of{" "}
+            <span className="font-semibold">
+              integrity, compassion, and collaboration
+            </span>
+            , we ensure that every initiative we undertake creates a{" "}
+            <span className="font-semibold">
+              lasting, transformative impact
+            </span>
+            , empowering individuals and communities alike. Our mission is to
+            build an{" "}
+            <span className="font-semibold">
+              inclusive and dignified future
+            </span>
+            , where opportunities are within reach for all, and every person can
+            thrive with hope and confidence.
+          </p>
+        </div>
       </div>
 
       {/*  Mission Section */}

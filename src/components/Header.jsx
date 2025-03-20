@@ -1,28 +1,31 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import logo from '../assets/logo-no-background.png'
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
-    <header className="w-full bg-gray-100">
+    <header className="w-full">
       {/* Main Navigation */}
       <div className="flex items-center justify-between py-2 px-4 md:px-8 border-b ">
         {/* logo */}
-        <div className="text-center md:text-left space-y-1">
-          <h1 className="text-lg md:text-2xl lg:text-3xl font-bold">
+        <div>
+        {/* className="text-center md:text-left space-y-1" */}
+          {/* <h1 className="text-lg md:text-2xl lg:text-3xl font-bold">
             Archana RamKishori Welfare Foundation!
           </h1>
           <span className="text-xs md:text-sm lg:text-base text-gray-500 block">
             Connecting humanity, inspiring people!
-          </span>
+          </span> */}
+          <img src={logo} alt="" className="w-96 h-auto mt-1" />
         </div>
 
         <div className="flex items-center gap-6">
           {/* Donate Button */}
-          <button className="hidden md:block px-6 py-3 text-white bg-gray-600 font-bold rounded-lg hover:bg-gray-900 transition">
+          <button onClick={()=> navigate('/donate')} className="hidden md:block px-6 py-3 text-white bg-blue-600 font-bold rounded-lg hover:bg-blue-700 transition">
             Donate Now
           </button>
 

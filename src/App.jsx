@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
+import Donate from "./pages/Donate";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-&-conditions" element={<TermsConditions />} />
+        <Route path="/donate" element={<Donate/>}/>
       </Routes>
       <Footer />
     </Router>

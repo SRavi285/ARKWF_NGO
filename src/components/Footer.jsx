@@ -6,19 +6,21 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import { FaLinkedin, FaPhone } from "react-icons/fa6";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="bg-gray-900 text-white py-10 px-6">
-      <div className=" mx-auto grid grid-cols-1 md:grid-cols-3 gap-2">
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-4 gap-2">
         {/* Logo & About */}
         <div>
           <h2 className="text-2xl font-bold">
             Archana RamKishori Welfare Foundation!
           </h2>
           <p className="mt-2">
-            Section 8 License Number: 163714, <br /> NITI Aayog Number: UP/2025/05-5470
+            Section 8 License Number: 163714, <br /> NITI Aayog Number:
+            UP/2025/05-5470
           </p>
           <p className="mt-2">
             {/* <FaMapMarkerAlt /> */}
@@ -54,7 +56,10 @@ const Footer = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about-us" className="hover:text-violet-400 transition">
+              <NavLink
+                to="/about-us"
+                className="hover:text-violet-400 transition"
+              >
                 About Us
               </NavLink>
             </li>
@@ -109,6 +114,12 @@ const Footer = () => {
               />
             </a>
           </div>
+        </div>
+        <div className="bg-white text-gray-800 h-[230px] w-[250px] p-6">
+          <h4 className="font-semibold text-2xl">Ready To Bring The Change. Let’s Get To Work Now!</h4>
+          <button onClick={()=> navigate('/donate')} className="bg-blue-600 text-white mt-6 px-12 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
+            Donate Now
+          </button>
         </div>
       </div>
 
