@@ -1,4 +1,5 @@
 import React from 'react'
+import QR from '../assets/qr.jpg';
 
 const Donate = () => {
   return (
