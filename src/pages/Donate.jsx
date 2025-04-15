@@ -21,6 +21,13 @@ const Donate = () => {
           <p>Please make your cheque/draft in the name of <strong>Archana RamKishori Welfare Foundation</strong> and send it Church Road, Pahalwara, Balrampur, Uttar Pradesh, India, 271201.</p>
         </div>
       </div>
+      <div className="m-6 shadow-xl p-5 flex flex-col justify-center items-center text-center ">
+        <h4 className="font-semibold text-gray-700 mb-4">
+          {" "}
+          UPI-ID : arkwf.org@sbi
+        </h4>
+        <img src={QR} className="w-48" alt="QR " />
+      </div>
     </div>
   )
 }
